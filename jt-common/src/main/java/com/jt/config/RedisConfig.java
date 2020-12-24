@@ -18,7 +18,7 @@ public class RedisConfig {
 
 
 	@Bean
-//	@Lazy
+	@Lazy
 	public Jedis jedis() {
 		return new Jedis(host, port);
 	}
