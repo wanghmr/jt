@@ -1,15 +1,19 @@
 package com.jt.controller;
 
-import java.util.List;
+import com.jt.anno.Cache_Find;
+import com.jt.service.ItemCatService;
+import com.jt.vo.EasyUITree;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
-import com.jt.anno.Cache_Find;
-import com.jt.service.ItemCatService;
-import com.jt.vo.EasyUITree;
-
+import java.util.List;
+/**
+ * @author wanghui
+ * @date 2020/12/24
+ * Description:商品类别controller
+ */
 @RestController
 @RequestMapping("/item/cat")
 public class ItemCatController {
@@ -21,7 +25,6 @@ public class ItemCatController {
 	 */
 	@RequestMapping("/queryItemName")
 	public String findItemCatNameById(Long itemCatId) {
-
 		return itemCatService.findItemCatNameById(itemCatId);
 	}
 

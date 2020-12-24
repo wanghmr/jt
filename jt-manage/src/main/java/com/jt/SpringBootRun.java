@@ -7,7 +7,7 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 /**
  * 管理端程序入口
  * http://localhost:8091
- * @author 15583
+ * @author wh
  *
  */
 @SpringBootApplication
@@ -15,7 +15,6 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 public class SpringBootRun {
 	
 	public static void main(String[] args) {
-		
 		SpringApplication.run(SpringBootRun.class, args);
 	}
 }

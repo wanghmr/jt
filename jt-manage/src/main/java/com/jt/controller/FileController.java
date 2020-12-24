@@ -1,17 +1,21 @@
 package com.jt.controller;
 
-import java.io.File;
-import java.io.IOException;
-
+import com.jt.service.FileService;
+import com.jt.vo.EasyUIImage;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.multipart.MultipartFile;
 
-import com.jt.service.FileService;
-import com.jt.vo.EasyUIImage;
+import java.io.File;
+import java.io.IOException;
 
+/**
+ * @author wanghui
+ * @date 2020/12/24
+ * Description:文件上传controller
+ */
 @Controller
 public class FileController {
 	@Autowired
