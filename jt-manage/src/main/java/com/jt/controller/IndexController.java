@@ -12,4 +12,6 @@ public class IndexController {
 	public String module(@PathVariable String moduleName) {
 		return moduleName;
 	}
+	
+	
 }

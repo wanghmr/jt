@@ -6,17 +6,28 @@ import org.aspectj.lang.annotation.Aspect;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 import org.springframework.util.StringUtils;
+
 import com.baomidou.mybatisplus.core.override.PageMapperMethod.MethodSignature;
 import com.jt.anno.Cache_Find;
 import com.jt.utils.ObjectMapperUtil;
-import redis.clients.jedis.Jedis;
+
+import redis.clients.jedis.JedisCluster;
 
 @Aspect //标识切面
 @Component //交给spring容器管理
 public class CacheAspect {
 
+//    @Autowired
+//    private Jedis jedis;
+	
+	/**
+	 *  required = false，當用戶使用時才注入
+	 */
+//	@Autowired(required = false)
+//	private ShardedJedis jedis;
+    
     @Autowired
-    private Jedis jedis;
+    private JedisCluster jedis;
 
     @Around("@annotation(cacheFind)")
     public Object around(ProceedingJoinPoint joinPoint, Cache_Find cacheFind) {
