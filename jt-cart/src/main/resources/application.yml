@@ -1,5 +1,5 @@
 server:
-  port: 8093
+  port: 8094
   servlet:
     context-path: /
 spring:
@@ -10,6 +10,8 @@ spring:
     url: jdbc:mysql://127.0.0.1:3306/jtdb?serverTimezone=GMT%2B8&useUnicode=true&characterEncoding=utf8&autoReconnect=true&allowMultiQueries=true
     username: root
     password: root
+    
+    
   
 #mybatis-plush配置
 mybatis-plus:
@@ -20,19 +22,20 @@ mybatis-plus:
     #开启驼峰映射
   configuration:
     map-underscore-to-camel-case: true
-
+ 
 #dubbo配置项   
 dubbo:
   scan:
     basePackages: com.jt  #配置包扫描
   application:            #服务名称必须定义
-    name: provider-user
+    name: provider-cart
   registry:               #注册中心
-    address: zookeeper://192.168.88.129:2181?backup=192.168.88.129:2182,192.168.88.129:2183
+     address: zookeeper://192.168.38.128:2181?backup=192.168.38.128:2182,192.168.38.128:2183   #?backup=192.168.126.176:2182,192.168.126.176:2183
   protocol:
     name: dubbo           #zookeeper节点名称
-    port: 20880           #RPC通信 dubbo内部通信端口 
-
+    port: 20881           #RPC通信 dubbo内部通信端口 
+ 
+ 
 #引入日志
 logging:
   level:
