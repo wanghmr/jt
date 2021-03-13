@@ -24,6 +24,7 @@ public class CartController {
 	public String show(Model model) {
 		long userId = 7L; //暂时写死
 		List<Cart> cartList = dubboCartService.findCartListByUserId(userId);
+		System.out.print("--------------"+cartList.toString()+"---------------");
 		model.addAttribute("cartList", cartList);
 		return "cart";
 	}

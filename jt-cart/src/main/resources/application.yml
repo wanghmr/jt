@@ -30,7 +30,7 @@ dubbo:
   application:            #服务名称必须定义
     name: provider-cart
   registry:               #注册中心
-     address: zookeeper://192.168.38.128:2181?backup=192.168.38.128:2182,192.168.38.128:2183   #?backup=192.168.126.176:2182,192.168.126.176:2183
+     address: zookeeper://192.168.88.129:2181?backup=192.168.88.129:2182,192.168.88.129:2183
   protocol:
     name: dubbo           #zookeeper节点名称
     port: 20881           #RPC通信 dubbo内部通信端口 
